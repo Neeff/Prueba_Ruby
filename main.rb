@@ -35,9 +35,8 @@ end
 
 
 
-def aprobados(data)
-puts 'ingrese nota de aprovacion '
-nota = gets.chomp.to_f
+def aprobados(data,nota_d)
+  nota = nota_d
   def nota(nota)
     nota
   end
@@ -73,7 +72,15 @@ while var
   elsif opcion == 2
     inasistencias(data)
   elsif opcion == 3
-    aprobados(data)
+    puts 'desea ingresar nota de aprovacion S/n'
+    option = gets.chomp
+    if option == 'S'
+      puts 'ingrese nota:'
+      nota_d = gets.chomp.to_f
+      aprobados(data,nota_d)
+    else
+      aprobados(data,5)
+    end
   elsif opcion == 4
     var = false
   else
