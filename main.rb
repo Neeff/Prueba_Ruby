@@ -64,7 +64,6 @@ while var
   puts 'Ingresa una Opcion'
   menu()
   opcion  = gets.chomp.to_i
-
   if opcion == 1
     nombre_promedio(data)
 
@@ -74,6 +73,8 @@ while var
     aprobados(data)
   elsif opcion == 4
     var = false
+  else
+    puts 'ingrese Una Opcion valida'
   end
 
 end
