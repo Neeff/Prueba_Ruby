@@ -38,15 +38,18 @@ end
 def aprobados(data)
 puts 'ingrese nota de aprovacion '
 nota = gets.chomp.to_f
+  def nota(nota)
+    nota
+  end
 data.each do |info|
   nombre = info[0]
   notas = info[1..-1].map{|i|i.to_f}
   suma  = notas.sum
   promedio  =suma/notas.length
-  if promedio< nota
-    puts "No Aprueba #{nombre}"
+  if promedio< nota(nota)
+    puts "No Aprueba (#{nombre})"
   else
-    puts "Aprueba #{nombre}"
+    puts "Aprueba (#{nombre})"
   end
 end
 end
