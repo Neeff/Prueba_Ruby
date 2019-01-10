@@ -72,7 +72,7 @@ while var
   elsif opcion == 2
     inasistencias(data)
   elsif opcion == 3
-    puts 'desea ingresar nota de aprovacion S/n'
+    puts 'desea ingresar nota de aprobacion S/n'
     option = gets.chomp
     if option == 'S'
       puts 'ingrese nota:'
